@@ -14,7 +14,7 @@ const SearchBar = ({ topic, onSearchChange }) => {
   return (
     <nav class="navbar navbar-light bg-light justify-content-between">
       <div style={{width: '100vw', display: 'flex', justifyContent: 'space-between'}}>
-        <a href="/#" class="navbar-brand">List</a>
+        <a href="/#" class="navbar-brand">Code Assesment</a>
         <input
           value={searchTerm}
           onChange={handleChange}
@@ -22,10 +22,12 @@ const SearchBar = ({ topic, onSearchChange }) => {
           type="search"yeah
           placeholder="Search"
           aria-label="Search"
+          data-testid="searchinput"
         />
         <button
           class="btn btn-outline-success my-2 my-sm-0"
           onClick={() => onSearchChange(searchTerm)}
+          data-testid="searchbutton"
         >
           Search
         </button>
